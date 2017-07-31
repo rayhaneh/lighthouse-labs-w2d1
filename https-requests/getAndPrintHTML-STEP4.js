@@ -1,4 +1,4 @@
-function getAndPrintHTML (options) {
+function getHTML (options,callback) {
 
   var https = require('https');
 
@@ -11,9 +11,8 @@ function getAndPrintHTML (options) {
     response.on('data',function(data) {
       html += data
     })
-
-    response.on('end',function() {
-      printHTML(html)
+    response.on('end',function(){
+      callback(html)
     })
 
   });
@@ -31,4 +30,4 @@ function printHTML (html) {
     path: '/http-examples/step1.html'
   };
 
-getAndPrintHTML(requestOptions)
+getHTML(requestOptions,printHTML)
