@@ -1,0 +1,14 @@
+{
+  "name": "https-requests-with-request",
+  "version": "1.0.0",
+  "description": "HTTP requests using request package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rayhaneh Banyassady",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
