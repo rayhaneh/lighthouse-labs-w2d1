@@ -11,6 +11,7 @@ module.exports = function getHTML (options,callback) {
     response.on('data',function(data) {
       html += data
     })
+
     response.on('end',function(){
       callback(html)
     })
